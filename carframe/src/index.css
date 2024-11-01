@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.fp-watermark{
+  display: none;
+}
+
 .swiper-slide {
     display: flex !important;
     justify-content: center;
