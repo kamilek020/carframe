@@ -13,12 +13,12 @@ const App = () => {
       scrollingSpeed={700}
       navigation
       navigationTooltips={['Home', 'Oferta', 'Cennik', 'O nas', 'Kontakt']}
-      scrollOverflow={true}
+      scrollOverflow={false} // Ustaw na false
       render={({ state, fullpageApi }) => (
         <div className="bg-gradient-to-r from-blue-50 to-teal-50 min-h-screen">
           <Fullpage.Wrapper>
             <div className="section">
-              <Hero />
+              <Hero fullpageApi={fullpageApi} /> {/* Przekazanie fullpageApi */}
             </div>
             <div className="section">
               <Listings />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hero = () => {
+const Hero = ({ fullpageApi }) => {
   return (
     <section className="relative h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-blue-700 to-teal-700 text-white overflow-hidden">
       
@@ -25,7 +25,9 @@ const Hero = () => {
           Oferujemy szeroki wybór sprawdzonych samochodów i pomoc w wyborze idealnego modelu.
         </p>
 
-        <button className="mt-8 px-10 py-4 bg-white text-blue-700 font-semibold rounded-full shadow-md hover:bg-blue-100 transition duration-300 animate-fade-in-up delay-3s">
+        <button 
+          onClick={() => fullpageApi.moveSectionDown()} // Dodaj funkcję do przewijania
+          className="mt-8 px-10 py-4 bg-white text-blue-700 font-semibold rounded-full shadow-md hover:bg-blue-100 transition duration-300 animate-fade-in-up delay-3s">
           Przeglądaj Ofertę
         </button>
       </div>
